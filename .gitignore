@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+
+# 受領資料・元データは明示的に公開範囲を確認してから扱う
+/assignment-main/
+/tmp/
+
+/data/processed/*
+!/data/processed/.gitkeep
+/outputs/models/*
+!/outputs/models/.gitkeep
+/outputs/predictions/*
+!/outputs/predictions/.gitkeep
+
+# 自分用の学習・面接準備メモ
+/local_notes/

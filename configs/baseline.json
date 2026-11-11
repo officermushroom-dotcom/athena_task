@@ -1,0 +1,16 @@
+{
+  "data_path": "assignment-main/data/ETTh1.csv",
+  "timestamp_column": "date",
+  "target_column": "OT",
+  "forecast_horizon_steps": 1,
+  "split": {
+    "method": "chronological",
+    "basis": "target_timestamp",
+    "end_exclusive": true,
+    "train_end": "2017-07-01 00:00:00",
+    "validation_end": "2018-01-01 00:00:00"
+  },
+  "primary_metric": "mae",
+  "random_seed": 42,
+  "output_dir": "outputs"
+}

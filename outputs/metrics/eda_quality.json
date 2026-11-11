@@ -1,0 +1,22 @@
+{
+  "dataset": "ETTh1",
+  "total_rows": 17420,
+  "start": "2016-07-01 00:00:00",
+  "end": "2018-06-26 19:00:00",
+  "missing_per_column": {
+    "date": 0,
+    "HUFL": 0,
+    "HULL": 0,
+    "MUFL": 0,
+    "MULL": 0,
+    "LUFL": 0,
+    "LULL": 0,
+    "OT": 0
+  },
+  "duplicate_timestamps": 0,
+  "non_hourly_steps": 0,
+  "exploration_start": "2016-07-01 00:00:00",
+  "exploration_end": "2017-06-30 23:00:00",
+  "exploration_rows": 8760,
+  "held_out_rows": 8660
+}

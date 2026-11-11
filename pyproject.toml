@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "athena-task"
+version = "0.1.0"
+description = "ETT oil temperature prediction PoC"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+analysis = ["jupyterlab", "seaborn"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
