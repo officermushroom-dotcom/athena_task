@@ -1,0 +1,40 @@
+{
+  "description": "ETTh1の3時間先予測で、持続予測と油温履歴を使うRidgeの誤差および急上昇時の過小予測を比較。",
+  "horizon_hours": 3,
+  "train_n": 8592,
+  "high_temperature_threshold": 31.44499969482422,
+  "rapid_rise_threshold": 2.2509994506835938,
+  "ridge": {
+    "n": 4416,
+    "mae": 0.942099063483343,
+    "rmse": 1.3225025340020566,
+    "mean_underprediction": 0.4438742952083742,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null
+      },
+      "rapid_rise": {
+        "n": 245,
+        "mean_underprediction": 2.5282039005113033
+      }
+    },
+    "alpha": 1.0
+  },
+  "persistence": {
+    "n": 4416,
+    "mae": 0.9889001497809867,
+    "rmse": 1.3910692233498578,
+    "mean_underprediction": 0.4898224707449908,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null
+      },
+      "rapid_rise": {
+        "n": 245,
+        "mean_underprediction": 2.9164327081368895
+      }
+    }
+  }
+}

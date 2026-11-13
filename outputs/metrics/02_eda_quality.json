@@ -1,4 +1,5 @@
 {
+  "description": "ETTh1の全期間の欠損・日時重複・観測間隔と、初期EDAに使った期間の件数。",
   "dataset": "ETTh1",
   "total_rows": 17420,
   "start": "2016-07-01 00:00:00",

@@ -1,0 +1,143 @@
+{
+  "description": "ETTm1の3時間先予測で、持続予測、油温のみのRidge、現在の負荷を加えたRidgeを比較。",
+  "horizon_hours": 3,
+  "train_n": 34368,
+  "high_temperature_threshold": 31.51499938964844,
+  "rapid_rise_threshold": 2.2509994506835938,
+  "ridge": {
+    "n": 17664,
+    "mae": 0.9378135752418765,
+    "rmse": 1.31296002586278,
+    "mean_underprediction": 0.44182027386676476,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null,
+        "mean_overprediction": null,
+        "mean_prediction_minus_actual": null
+      },
+      "rapid_rise": {
+        "n": 910,
+        "mean_underprediction": 2.5403568739625326,
+        "mean_overprediction": 0.0,
+        "mean_prediction_minus_actual": -2.5403568739625326
+      },
+      "other_hours": {
+        "n": 16754,
+        "mean_underprediction": 0.327837445522062,
+        "mean_overprediction": 0.5229333696723155,
+        "mean_prediction_minus_actual": 0.19509592415025348
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 0,
+      "misses": 910,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    },
+    "alpha": 1.0
+  },
+  "persistence": {
+    "n": 17664,
+    "mae": 0.9835451818881151,
+    "rmse": 1.3816375749889145,
+    "mean_underprediction": 0.4871310601517072,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null,
+        "mean_overprediction": null,
+        "mean_prediction_minus_actual": null
+      },
+      "rapid_rise": {
+        "n": 910,
+        "mean_underprediction": 2.9441560742619273,
+        "mean_overprediction": 0.0,
+        "mean_prediction_minus_actual": -2.9441560742619273
+      },
+      "other_hours": {
+        "n": 16754,
+        "mean_underprediction": 0.353676794732088,
+        "mean_overprediction": 0.5233770470545488,
+        "mean_prediction_minus_actual": 0.16970025232246075
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 0,
+      "misses": 910,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    }
+  },
+  "ridge_with_load": {
+    "n": 17664,
+    "mae": 0.988439999121895,
+    "rmse": 1.3508134890140064,
+    "mean_underprediction": 0.340660555407292,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null,
+        "mean_overprediction": null,
+        "mean_prediction_minus_actual": null
+      },
+      "rapid_rise": {
+        "n": 910,
+        "mean_underprediction": 1.9778070674268535,
+        "mean_overprediction": 0.009642421693867658,
+        "mean_prediction_minus_actual": -1.9681646457329858
+      },
+      "other_hours": {
+        "n": 16754,
+        "mean_underprediction": 0.25173830842521006,
+        "mean_overprediction": 0.6824401032609125,
+        "mean_prediction_minus_actual": 0.4307017948357024
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 77,
+      "misses": 833,
+      "false_alarms": 190,
+      "recall": 0.08461538461538462,
+      "precision": 0.2883895131086142
+    },
+    "alpha": 1.0
+  },
+  "ridge_with_offset": {
+    "n": 17664,
+    "mae": 0.9768202364102159,
+    "rmse": 1.3497745340446383,
+    "mean_underprediction": 0.329537543360322,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 0,
+        "mean_underprediction": null,
+        "mean_overprediction": null,
+        "mean_prediction_minus_actual": null
+      },
+      "rapid_rise": {
+        "n": 910,
+        "mean_underprediction": 2.2767847517813076,
+        "mean_overprediction": 0.0,
+        "mean_prediction_minus_actual": -2.2767847517813076
+      },
+      "other_hours": {
+        "n": 16754,
+        "mean_underprediction": 0.223772056929434,
+        "mean_overprediction": 0.6824401032609125,
+        "mean_prediction_minus_actual": 0.4586680463314785
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 0,
+      "misses": 910,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    },
+    "alpha": 1.0,
+    "offset": 0.2635721221812251
+  }
+}

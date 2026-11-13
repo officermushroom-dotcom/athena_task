@@ -1,0 +1,46 @@
+{
+  "description": "ETTm2の1時間先予測で、1日・7日・14日分の油温を使うRidgeを同じ学習・検証行で比較。",
+  "horizon_minutes": 60,
+  "train_n": 33693,
+  "n": 17664,
+  "persistence": {
+    "mae": 0.871596959244082,
+    "rmse": 1.2149875325318926,
+    "mean_underprediction": 0.4336216086116822
+  },
+  "ridge": {
+    "n": 17664,
+    "mae": 0.5410782995633233,
+    "rmse": 0.792051389505482,
+    "mean_underprediction": 0.2803612527862721,
+    "alpha": 1.0
+  },
+  "ridge_five_recent": {
+    "n": 17664,
+    "mae": 0.5189571611191867,
+    "rmse": 0.782276211906262,
+    "mean_underprediction": 0.2718679087103168,
+    "alpha": 1.0
+  },
+  "ridge_week_recent": {
+    "n": 17664,
+    "mae": 0.4457766689720758,
+    "rmse": 0.6617393734705403,
+    "mean_underprediction": 0.22001509329333455,
+    "alpha": 1.0
+  },
+  "ridge_day_recent": {
+    "n": 17664,
+    "mae": 0.45390581935385,
+    "rmse": 0.6796532157709476,
+    "mean_underprediction": 0.22869420463100595,
+    "alpha": 1.0
+  },
+  "ridge_two_weeks_recent": {
+    "n": 17664,
+    "mae": 0.4506697791785388,
+    "rmse": 0.6651150632137003,
+    "mean_underprediction": 0.2191673089693609,
+    "alpha": 1.0
+  }
+}

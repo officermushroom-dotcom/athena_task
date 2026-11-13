@@ -1,0 +1,90 @@
+{
+  "description": "ETTm2の15分先予測で、持続予測、直近の油温3点を使うRidge、過去7日分の同時刻の油温も使うRidgeを比較。",
+  "train_n": 34368,
+  "n": 17664,
+  "rise_threshold": 0.4395008087158203,
+  "actual_rapid_rises": 1770,
+  "persistence": {
+    "mae": 0.22219109859155572,
+    "rmse": 0.34430486994435194,
+    "mean_underprediction": 0.11056066196465837,
+    "hits": 0,
+    "misses": 1770,
+    "false_alarms": 0,
+    "recall": 0.0
+  },
+  "ridge": {
+    "mae": 0.16679959192302618,
+    "rmse": 0.24127840768582878,
+    "mean_underprediction": 0.08288031639206418,
+    "hits": 337,
+    "misses": 1433,
+    "false_alarms": 57,
+    "recall": 0.1903954802259887
+  },
+  "ridge_alert_tradeoff": [
+    {
+      "alert_threshold": 0.4395008087158203,
+      "hits": 337,
+      "misses": 1433,
+      "false_alarms": 57,
+      "recall": 0.1903954802259887,
+      "precision": 0.8553299492385786
+    },
+    {
+      "alert_threshold": 0.5,
+      "hits": 164,
+      "misses": 1606,
+      "false_alarms": 24,
+      "recall": 0.09265536723163842,
+      "precision": 0.8723404255319149
+    },
+    {
+      "alert_threshold": 0.3,
+      "hits": 883,
+      "misses": 887,
+      "false_alarms": 322,
+      "recall": 0.49887005649717514,
+      "precision": 0.7327800829875518
+    },
+    {
+      "alert_threshold": 0.2,
+      "hits": 1303,
+      "misses": 467,
+      "false_alarms": 930,
+      "recall": 0.7361581920903955,
+      "precision": 0.5835199283475145
+    },
+    {
+      "alert_threshold": 0.1,
+      "hits": 1576,
+      "misses": 194,
+      "false_alarms": 2166,
+      "recall": 0.8903954802259887,
+      "precision": 0.42116515232495993
+    },
+    {
+      "alert_threshold": 0.05,
+      "hits": 1675,
+      "misses": 95,
+      "false_alarms": 3155,
+      "recall": 0.9463276836158192,
+      "precision": 0.34679089026915116
+    }
+  ],
+  "ridge_rapid_rise_diagnostics": {
+    "positive_predictions": 1735,
+    "median_predicted_change": 0.2985697861389234,
+    "max_predicted_change": 0.7078403148231178
+  },
+  "matched_recent_only": {
+    "mae": 0.1660021763220345,
+    "rmse": 0.2418654579636448,
+    "mean_underprediction": 0.08432791161590512,
+    "hits": 349,
+    "misses": 1421,
+    "false_alarms": 61,
+    "recall": 0.19717514124293786
+  },
+  "horizon_minutes": 15
+}

@@ -1,0 +1,90 @@
+{
+  "description": "ETTm1の15分先予測で、持続予測、直近の油温3点を使うRidge、過去7日分の同時刻の油温も使うRidgeを比較。",
+  "train_n": 34368,
+  "n": 17664,
+  "rise_threshold": 0.5629997253417951,
+  "actual_rapid_rises": 908,
+  "persistence": {
+    "mae": 0.252632364232525,
+    "rmse": 0.39258531573861283,
+    "mean_underprediction": 0.12592391535113362,
+    "hits": 0,
+    "misses": 908,
+    "false_alarms": 0,
+    "recall": 0.0
+  },
+  "ridge": {
+    "mae": 0.2535422476037632,
+    "rmse": 0.38926345070097607,
+    "mean_underprediction": 0.12413832343191357,
+    "hits": 0,
+    "misses": 908,
+    "false_alarms": 0,
+    "recall": 0.0
+  },
+  "ridge_alert_tradeoff": [
+    {
+      "alert_threshold": 0.5629997253417951,
+      "hits": 0,
+      "misses": 908,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    },
+    {
+      "alert_threshold": 0.5,
+      "hits": 0,
+      "misses": 908,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    },
+    {
+      "alert_threshold": 0.3,
+      "hits": 1,
+      "misses": 907,
+      "false_alarms": 1,
+      "recall": 0.0011013215859030838,
+      "precision": 0.5
+    },
+    {
+      "alert_threshold": 0.2,
+      "hits": 20,
+      "misses": 888,
+      "false_alarms": 3,
+      "recall": 0.022026431718061675,
+      "precision": 0.8695652173913043
+    },
+    {
+      "alert_threshold": 0.1,
+      "hits": 131,
+      "misses": 777,
+      "false_alarms": 187,
+      "recall": 0.14427312775330398,
+      "precision": 0.4119496855345912
+    },
+    {
+      "alert_threshold": 0.05,
+      "hits": 285,
+      "misses": 623,
+      "false_alarms": 1540,
+      "recall": 0.31387665198237885,
+      "precision": 0.15616438356164383
+    }
+  ],
+  "ridge_rapid_rise_diagnostics": {
+    "positive_predictions": 581,
+    "median_predicted_change": 0.017590284782272203,
+    "max_predicted_change": 0.3231204607320599
+  },
+  "matched_recent_only": {
+    "mae": 0.2540409702769489,
+    "rmse": 0.3903300643553595,
+    "mean_underprediction": 0.12273887345279892,
+    "hits": 0,
+    "misses": 908,
+    "false_alarms": 0,
+    "recall": 0.0
+  },
+  "horizon_minutes": 15
+}

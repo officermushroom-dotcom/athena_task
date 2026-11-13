@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 analysis = ["jupyterlab", "seaborn"]
+boosting = ["lightgbm==4.7.0"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

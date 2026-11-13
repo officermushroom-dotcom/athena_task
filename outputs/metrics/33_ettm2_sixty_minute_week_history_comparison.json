@@ -1,0 +1,32 @@
+{
+  "description": "ETTm2の1時間先予測で、持続予測と直近3点・5点・7日分の油温を使うRidgeを比較。",
+  "horizon_minutes": 60,
+  "train_n": 34365,
+  "n": 17664,
+  "persistence": {
+    "mae": 0.871596959244082,
+    "rmse": 1.2149875325318926,
+    "mean_underprediction": 0.4336216086116822
+  },
+  "ridge": {
+    "n": 17664,
+    "mae": 0.5413557203091138,
+    "rmse": 0.7921256402146689,
+    "mean_underprediction": 0.27940603664795477,
+    "alpha": 1.0
+  },
+  "ridge_five_recent": {
+    "n": 17664,
+    "mae": 0.5189598526409166,
+    "rmse": 0.7818265780510543,
+    "mean_underprediction": 0.27043327089795083,
+    "alpha": 1.0
+  },
+  "ridge_week_recent": {
+    "n": 17664,
+    "mae": 0.44578693697843214,
+    "rmse": 0.6610569053787078,
+    "mean_underprediction": 0.2196542359103716,
+    "alpha": 1.0
+  }
+}

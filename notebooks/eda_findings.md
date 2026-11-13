@@ -48,4 +48,4 @@ OTと1時間前のOTの相関は0.993。
 負荷6列すべてに負値がある。定義・計測方法が十分に分からないため、負値を自動的に異常値とは扱わない。OTには1時間で約9.9変化する箇所もある（例：2017-05-22 19:00）。実現象かセンサ等の問題かは未判定であり、前後の負荷や温度との照合が必要。
 
 
-図表は`outputs/figures/eda_*.png`、集計は`outputs/metrics/eda_*.csv`と`eda_quality.json`に保存される。
+図表は`outputs/figures/eda_*.png`、集計は`outputs/metrics/eda_*.csv`と`02_eda_quality.json`に保存される。

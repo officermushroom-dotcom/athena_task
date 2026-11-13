@@ -1,0 +1,46 @@
+{
+  "description": "ETTm2の1時間先の最終テスト。2018年1月以降で持続予測と直近1日・7日分の油温を使うRidgeを比較し、全体の誤差と急上昇時の過小予測を集計。",
+  "horizon_minutes": 60,
+  "train_n": 34365,
+  "test_n": 16976,
+  "test_start": "2018-01-01 00:00:00",
+  "test_end": "2018-06-26 19:45:00",
+  "rapid_rise_threshold": 1.758000373840332,
+  "persistence": {
+    "mae": 0.9107949278272626,
+    "rmse": 1.2789009180667372,
+    "mean_underprediction": 0.45939912808520067,
+    "rapid_rise": {
+      "n": 1829,
+      "mean_underprediction": 2.7651501158389844,
+      "mean_overprediction": 0.0,
+      "mean_prediction_minus_actual": -2.7651501158389844
+    }
+  },
+  "ridge_day": {
+    "n": 16976,
+    "mae": 0.46753748832888614,
+    "rmse": 0.6796644510672383,
+    "mean_underprediction": 0.23242707787290315,
+    "rapid_rise": {
+      "n": 1829,
+      "mean_underprediction": 0.9447159061095965,
+      "mean_overprediction": 0.03711889428746296,
+      "mean_prediction_minus_actual": -0.9075970118221335
+    },
+    "alpha": 1.0
+  },
+  "ridge_week": {
+    "n": 16976,
+    "mae": 0.4607833152903812,
+    "rmse": 0.6662247624420083,
+    "mean_underprediction": 0.23415926617159777,
+    "rapid_rise": {
+      "n": 1829,
+      "mean_underprediction": 0.889255102422494,
+      "mean_overprediction": 0.02584268343031705,
+      "mean_prediction_minus_actual": -0.863412418992177
+    },
+    "alpha": 1.0
+  }
+}

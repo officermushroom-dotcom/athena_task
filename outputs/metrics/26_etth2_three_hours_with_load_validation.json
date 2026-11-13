@@ -1,0 +1,143 @@
+{
+  "description": "ETTh2の3時間先予測で、持続予測、油温のみのRidge、現在の負荷を加えたRidgeを比較。",
+  "horizon_hours": 3,
+  "train_n": 8592,
+  "high_temperature_threshold": 43.05649948120117,
+  "rapid_rise_threshold": 5.272998809814453,
+  "ridge": {
+    "n": 4416,
+    "mae": 1.5985496900187244,
+    "rmse": 2.185843989013484,
+    "mean_underprediction": 0.7687363121894445,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 576,
+        "mean_underprediction": 1.38830501867487,
+        "mean_overprediction": 0.5589350977160926,
+        "mean_prediction_minus_actual": -0.8293699209587773
+      },
+      "rapid_rise": {
+        "n": 407,
+        "mean_underprediction": 3.8111571493969274,
+        "mean_overprediction": 0.005653884717497758,
+        "mean_prediction_minus_actual": -3.8055032646794293
+      },
+      "other_hours": {
+        "n": 4009,
+        "mean_underprediction": 0.45986495256274307,
+        "mean_overprediction": 0.9134833488186778,
+        "mean_prediction_minus_actual": 0.4536183962559346
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 72,
+      "misses": 335,
+      "false_alarms": 15,
+      "recall": 0.1769041769041769,
+      "precision": 0.8275862068965517
+    },
+    "alpha": 1.0
+  },
+  "persistence": {
+    "n": 4416,
+    "mae": 2.412376695353052,
+    "rmse": 3.2374767328966407,
+    "mean_underprediction": 1.1992969864952392,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 576,
+        "mean_underprediction": 2.3494956625832453,
+        "mean_overprediction": 1.4190590977668762,
+        "mean_prediction_minus_actual": -0.9304365648163692
+      },
+      "rapid_rise": {
+        "n": 407,
+        "mean_underprediction": 7.217524585911331,
+        "mean_overprediction": 0.0,
+        "mean_prediction_minus_actual": -7.217524585911331
+      },
+      "other_hours": {
+        "n": 4009,
+        "mean_underprediction": 0.5883170331496793,
+        "mean_overprediction": 1.336233473264181,
+        "mean_prediction_minus_actual": 0.7479164401145015
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 0,
+      "misses": 407,
+      "false_alarms": 0,
+      "recall": 0.0,
+      "precision": null
+    }
+  },
+  "ridge_with_load": {
+    "n": 4416,
+    "mae": 1.5989982854169689,
+    "rmse": 2.1843930611799673,
+    "mean_underprediction": 0.7817405010145344,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 576,
+        "mean_underprediction": 1.4212553006999569,
+        "mean_overprediction": 0.5287045174418383,
+        "mean_prediction_minus_actual": -0.8925507832581189
+      },
+      "rapid_rise": {
+        "n": 407,
+        "mean_underprediction": 3.8683990869607032,
+        "mean_overprediction": 0.00329503432922215,
+        "mean_prediction_minus_actual": -3.8651040526314815
+      },
+      "other_hours": {
+        "n": 4009,
+        "mean_underprediction": 0.46837805539715094,
+        "mean_overprediction": 0.8998925659638705,
+        "mean_prediction_minus_actual": 0.4315145105667196
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 66,
+      "misses": 341,
+      "false_alarms": 12,
+      "recall": 0.16216216216216217,
+      "precision": 0.8461538461538461
+    },
+    "alpha": 1.0
+  },
+  "ridge_with_offset": {
+    "n": 4416,
+    "mae": 1.5975332320953406,
+    "rmse": 2.1853095784172996,
+    "mean_underprediction": 0.7800956682732069,
+    "underprediction_by_group": {
+      "high_temperature": {
+        "n": 576,
+        "mean_underprediction": 1.4037793071599436,
+        "mean_overprediction": 0.5506742161102576,
+        "mean_prediction_minus_actual": -0.8531050910496861
+      },
+      "rapid_rise": {
+        "n": 407,
+        "mean_underprediction": 3.8344840978892214,
+        "mean_overprediction": 0.005245663118882615,
+        "mean_prediction_minus_actual": -3.829238434770338
+      },
+      "other_hours": {
+        "n": 4009,
+        "mean_underprediction": 0.47000933979884485,
+        "mean_overprediction": 0.8998925659638708,
+        "mean_prediction_minus_actual": 0.4298832261650257
+      }
+    },
+    "rapid_rise_alerts": {
+      "hits": 72,
+      "misses": 335,
+      "false_alarms": 15,
+      "recall": 0.1769041769041769,
+      "precision": 0.8275862068965517
+    },
+    "alpha": 1.0,
+    "offset": -0.02373517009090897
+  }
+}

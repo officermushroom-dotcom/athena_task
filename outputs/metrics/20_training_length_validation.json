@@ -1,0 +1,24 @@
+{
+  "description": "ETTh1の1時間先予測で、学習12か月と15か月のRidgeを共通の2017年10〜12月で比較。",
+  "horizon_hours": 1,
+  "validation_start": "2017-10-01 00:00:00",
+  "validation_end_exclusive": "2018-01-01 00:00:00",
+  "n": 2208,
+  "persistence": {
+    "mae": 0.4484719208077244,
+    "rmse": 0.6450159199187129,
+    "mean_underprediction": 0.2226748191954001
+  },
+  "ridge_12_months": {
+    "train_n": 8592,
+    "mae": 0.44713549383048534,
+    "rmse": 0.6384323935368591,
+    "mean_underprediction": 0.2091028468288314
+  },
+  "ridge_15_months": {
+    "train_n": 10800,
+    "mae": 0.44728930562341374,
+    "rmse": 0.6383778566271934,
+    "mean_underprediction": 0.2098227437749006
+  }
+}

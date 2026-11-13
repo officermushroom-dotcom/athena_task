@@ -9,7 +9,7 @@ ETTデータセットを使って変圧器の油温（OT）を予測し、故障
 - `docs/modeling_plan.md`：データの分け方、誤差の測り方、比較する予測方法。それぞれを選んだ理由。
 - `src/athena_task/eda.py`：データを読み、集計とグラフ作成を行うコード。短いコメント付き。
 
-未決定の設定は、検証方針を整理したうえで追加する。
+- [実験記録](docs/experiment_log.md)：各比較の条件と結果。
 
 ## フォルダ構成
 
@@ -21,12 +21,9 @@ athena_task/
 ├── configs/               # 実験設定
 ├── notebooks/             # EDA・結果の探索
 ├── src/athena_task/        # データ処理・特徴量・学習・評価
-├── data/processed/        # 加工データ（Git管理対象外）
 ├── outputs/
 │   ├── figures/           # 図表
-│   ├── metrics/           # 評価結果
-│   ├── models/            # 学習済みモデル（Git管理対象外）
-│   └── predictions/       # 予測結果（Git管理対象外）
+│   └── metrics/           # 評価結果
 ├── reports/               # PoC報告・スライド構成
 └── docs/                  # 前提・実験記録
 ```
@@ -41,15 +38,15 @@ python -m pip install -e .
 
 分析用の追加パッケージ：`python -m pip install -e ".[analysis]"`
 
-## 進め方
+## 最終テスト
 
-1. 予測する時間と、使える情報を決める。
-2. グラフや集計で、データの傾向を調べる（EDA）。ここまでは実施済み。
-3. データの分け方と、予測の良し悪しを測る方法を決める。ここまで方針を整理済み。
-4. 持続予測（現在と同じ油温と予測）とRidge回帰を比較する。今は入力の詳細を決める前の段階。
-5. 結果を確認してから、次の改善を一つずつ考える。
+ETTm2の1時間先予測では、2018年1月以降の16,976件で、7日分の油温を使うRidgeのMAEが持続予測の0.9108から0.4608に下がった。1日分でも0.4675だった。結果はETTm2の油温予測に関するもので、実機での警報性能は別途検証が必要。
 
+元データを `assignment-main/data/` に配置し、以下を実行する。
 
+```powershell
+python -m athena_task.ridge --dataset ETTm2 --sixty-minutes --week-recent --final-test
+```
 
 ## 提出物
 

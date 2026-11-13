@@ -17,7 +17,7 @@ LOADS = ["HUFL", "HULL", "MUFL", "MULL", "LUFL", "LULL"]
 
 
 def main():
-    # 図表・集計結果の保存先を準備する（既存でもエラーにしない）。
+    # 図表・集計結果の保存先を準備する。
     figures = ROOT / "outputs/figures"
     metrics = ROOT / "outputs/metrics"
     figures.mkdir(parents=True, exist_ok=True)
@@ -27,7 +27,7 @@ def main():
     # 初年度のみで探索し、後続期間をモデル選択前の詳細分析から保留する。
     # 日時をインデックスにする。trainは現時点では探索用データを指す。
     train = df.set_index("date").loc[lambda x: x.index < "2017-07-01"]
-    # 全期間の欠損・日時重複・時間間隔を確認する（補正や削除はしない）。
+    # 全期間の欠損・日時重複・時間間隔を確認する。
     quality = {
         "dataset": "ETTh1", "total_rows": len(df),
         "start": str(df.date.min()), "end": str(df.date.max()),

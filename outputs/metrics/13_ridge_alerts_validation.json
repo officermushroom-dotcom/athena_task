@@ -1,0 +1,29 @@
+{
+  "description": "ETTh1の1時間先予測で、学習期間の油温の90パーセンタイルへの到達を検知できるか評価。",
+  "n": 4416,
+  "alpha": 1.0,
+  "mae": 0.5304006476983293,
+  "rmse": 0.8027333043112254,
+  "alerts": {
+    "threshold": 31.44499969482422,
+    "eligible_n": 4416,
+    "actual_crossings": 0,
+    "persistence": {
+      "hits": 0,
+      "misses": 0,
+      "false_alarms": 0
+    },
+    "ridge": {
+      "hits": 0,
+      "misses": 0,
+      "false_alarms": 0
+    }
+  },
+  "matched_two_days_oil": {
+    "n": 4416,
+    "alpha": 1.0,
+    "mae": 0.5321227811999414,
+    "rmse": 0.8058654365417108
+  },
+  "train_n": 8592
+}

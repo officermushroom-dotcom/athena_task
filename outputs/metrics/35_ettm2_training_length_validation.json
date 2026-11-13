@@ -1,0 +1,24 @@
+{
+  "description": "ETTm2の1時間先予測で、7日分の油温を使うRidgeを12か月・15か月で学習し、共通の2017年10〜12月で比較。",
+  "horizon_hours": 1,
+  "validation_start": "2017-10-01 00:00:00",
+  "validation_end_exclusive": "2018-01-01 00:00:00",
+  "n": 8832,
+  "persistence": {
+    "mae": 0.8650788048255271,
+    "rmse": 1.2278724492041944,
+    "mean_underprediction": 0.42855876365649526
+  },
+  "ridge_12_months": {
+    "train_n": 34365,
+    "mae": 0.3961374345790653,
+    "rmse": 0.5395115478676659,
+    "mean_underprediction": 0.18666457219511548
+  },
+  "ridge_15_months": {
+    "train_n": 43197,
+    "mae": 0.3956537042309936,
+    "rmse": 0.537655513582,
+    "mean_underprediction": 0.18562114754889392
+  }
+}
