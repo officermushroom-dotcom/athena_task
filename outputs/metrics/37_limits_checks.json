@@ -1,0 +1,810 @@
+{
+  "description": "最終構成（Ridge・直近672点・1時間先）で、報告スライドの限界を検証した結果。",
+  "ettm1_same_config": {
+    "validation": {
+      "n": 17664,
+      "persistence_mae": 0.5321801996391698,
+      "ridge_mae": 0.509835409496441
+    },
+    "test": {
+      "n": 16976,
+      "persistence_mae": 0.4388903744666224,
+      "ridge_mae": 0.43373157360159126
+    }
+  },
+  "ettm2_monthly": [
+    {
+      "month": "2017-07",
+      "n": 2976,
+      "mean_oil": 43.23861893338542,
+      "persistence_mae": 0.9585015350772489,
+      "ridge_mae": 0.467884260480122
+    },
+    {
+      "month": "2017-08",
+      "n": 2976,
+      "mean_oil": 39.31345699679467,
+      "persistence_mae": 0.8963387384209581,
+      "ridge_mae": 0.5457718660754542
+    },
+    {
+      "month": "2017-09",
+      "n": 2880,
+      "mean_oil": 32.79883683787452,
+      "persistence_mae": 0.7762180659506056,
+      "ridge_mae": 0.4719157033496433
+    },
+    {
+      "month": "2017-10",
+      "n": 2976,
+      "mean_oil": 25.48213037944609,
+      "persistence_mae": 0.8161538993158648,
+      "ridge_mae": 0.39976397925807583
+    },
+    {
+      "month": "2017-11",
+      "n": 2880,
+      "mean_oil": 20.835501572158602,
+      "persistence_mae": 0.8785251806179682,
+      "ridge_mae": 0.39596876833173966
+    },
+    {
+      "month": "2017-12",
+      "n": 2976,
+      "mean_oil": 13.3182315273631,
+      "persistence_mae": 0.9009910886005689,
+      "ridge_mae": 0.39279177905090396
+    },
+    {
+      "month": "2018-01",
+      "n": 2976,
+      "mean_oil": 9.439455309194908,
+      "persistence_mae": 0.6145866952275717,
+      "ridge_mae": 0.37118641981637224
+    },
+    {
+      "month": "2018-02",
+      "n": 2688,
+      "mean_oil": 12.249384681866408,
+      "persistence_mae": 0.899341138434552,
+      "ridge_mae": 0.40651852252769805
+    },
+    {
+      "month": "2018-03",
+      "n": 2976,
+      "mean_oil": 20.94590627442124,
+      "persistence_mae": 1.0203703103526947,
+      "ridge_mae": 0.49825914476507444
+    },
+    {
+      "month": "2018-04",
+      "n": 2880,
+      "mean_oil": 27.639298282729253,
+      "persistence_mae": 1.1010319272677103,
+      "ridge_mae": 0.49605284565024915
+    },
+    {
+      "month": "2018-05",
+      "n": 2976,
+      "mean_oil": 32.58065542226197,
+      "persistence_mae": 0.825705692332278,
+      "ridge_mae": 0.500355714751828
+    },
+    {
+      "month": "2018-06",
+      "n": 2480,
+      "mean_oil": 37.019893746222216,
+      "persistence_mae": 1.0283554738567722,
+      "ridge_mae": 0.4939005451817666
+    }
+  ],
+  "ettm2_alerts": {
+    "counting": "15分ごとの判定で数える。急上昇＝その時刻までの1時間の実測上昇幅が基準以上、通知＝1時間前に出した予測上昇幅が通知基準以上",
+    "rapid_rise_threshold": 1.758000373840332,
+    "rapid_rise_rows": {
+      "validation": 1672,
+      "test": 1829
+    },
+    "validation_sweep": [
+      {
+        "alert_threshold": 0.2,
+        "hits": 1649,
+        "misses": 23,
+        "false_alarms": 4049,
+        "recall": 0.986244019138756,
+        "precision": 0.2893997893997894,
+        "false_alarms_per_day": 22.005434782608695
+      },
+      {
+        "alert_threshold": 0.25,
+        "hits": 1648,
+        "misses": 24,
+        "false_alarms": 3817,
+        "recall": 0.9856459330143541,
+        "precision": 0.30155535224153707,
+        "false_alarms_per_day": 20.744565217391305
+      },
+      {
+        "alert_threshold": 0.3,
+        "hits": 1648,
+        "misses": 24,
+        "false_alarms": 3597,
+        "recall": 0.9856459330143541,
+        "precision": 0.3142040038131554,
+        "false_alarms_per_day": 19.54891304347826
+      },
+      {
+        "alert_threshold": 0.35,
+        "hits": 1645,
+        "misses": 27,
+        "false_alarms": 3415,
+        "recall": 0.9838516746411483,
+        "precision": 0.325098814229249,
+        "false_alarms_per_day": 18.559782608695652
+      },
+      {
+        "alert_threshold": 0.4,
+        "hits": 1638,
+        "misses": 34,
+        "false_alarms": 3234,
+        "recall": 0.9796650717703349,
+        "precision": 0.33620689655172414,
+        "false_alarms_per_day": 17.57608695652174
+      },
+      {
+        "alert_threshold": 0.45,
+        "hits": 1634,
+        "misses": 38,
+        "false_alarms": 3070,
+        "recall": 0.9772727272727273,
+        "precision": 0.3473639455782313,
+        "false_alarms_per_day": 16.684782608695652
+      },
+      {
+        "alert_threshold": 0.5,
+        "hits": 1631,
+        "misses": 41,
+        "false_alarms": 2904,
+        "recall": 0.9754784688995215,
+        "precision": 0.3596471885336273,
+        "false_alarms_per_day": 15.782608695652174
+      },
+      {
+        "alert_threshold": 0.55,
+        "hits": 1625,
+        "misses": 47,
+        "false_alarms": 2751,
+        "recall": 0.97188995215311,
+        "precision": 0.3713436928702011,
+        "false_alarms_per_day": 14.951086956521738
+      },
+      {
+        "alert_threshold": 0.6,
+        "hits": 1618,
+        "misses": 54,
+        "false_alarms": 2575,
+        "recall": 0.9677033492822966,
+        "precision": 0.385881230622466,
+        "false_alarms_per_day": 13.994565217391305
+      },
+      {
+        "alert_threshold": 0.65,
+        "hits": 1611,
+        "misses": 61,
+        "false_alarms": 2412,
+        "recall": 0.9635167464114832,
+        "precision": 0.4004474272930649,
+        "false_alarms_per_day": 13.108695652173912
+      },
+      {
+        "alert_threshold": 0.7,
+        "hits": 1603,
+        "misses": 69,
+        "false_alarms": 2254,
+        "recall": 0.958732057416268,
+        "precision": 0.41560798548094374,
+        "false_alarms_per_day": 12.25
+      },
+      {
+        "alert_threshold": 0.75,
+        "hits": 1592,
+        "misses": 80,
+        "false_alarms": 2100,
+        "recall": 0.9521531100478469,
+        "precision": 0.4312026002166847,
+        "false_alarms_per_day": 11.41304347826087
+      },
+      {
+        "alert_threshold": 0.8,
+        "hits": 1574,
+        "misses": 98,
+        "false_alarms": 1929,
+        "recall": 0.9413875598086124,
+        "precision": 0.4493291464459035,
+        "false_alarms_per_day": 10.483695652173912
+      },
+      {
+        "alert_threshold": 0.85,
+        "hits": 1556,
+        "misses": 116,
+        "false_alarms": 1770,
+        "recall": 0.930622009569378,
+        "precision": 0.4678292242934456,
+        "false_alarms_per_day": 9.619565217391305
+      },
+      {
+        "alert_threshold": 0.9,
+        "hits": 1542,
+        "misses": 130,
+        "false_alarms": 1620,
+        "recall": 0.9222488038277512,
+        "precision": 0.4876660341555977,
+        "false_alarms_per_day": 8.804347826086957
+      },
+      {
+        "alert_threshold": 0.95,
+        "hits": 1522,
+        "misses": 150,
+        "false_alarms": 1483,
+        "recall": 0.9102870813397129,
+        "precision": 0.5064891846921797,
+        "false_alarms_per_day": 8.059782608695652
+      },
+      {
+        "alert_threshold": 1.0,
+        "hits": 1490,
+        "misses": 182,
+        "false_alarms": 1369,
+        "recall": 0.8911483253588517,
+        "precision": 0.5211612451906261,
+        "false_alarms_per_day": 7.440217391304348
+      },
+      {
+        "alert_threshold": 1.05,
+        "hits": 1472,
+        "misses": 200,
+        "false_alarms": 1262,
+        "recall": 0.8803827751196173,
+        "precision": 0.5384052670080468,
+        "false_alarms_per_day": 6.858695652173913
+      },
+      {
+        "alert_threshold": 1.1,
+        "hits": 1448,
+        "misses": 224,
+        "false_alarms": 1161,
+        "recall": 0.8660287081339713,
+        "precision": 0.5550019164430816,
+        "false_alarms_per_day": 6.309782608695652
+      },
+      {
+        "alert_threshold": 1.15,
+        "hits": 1413,
+        "misses": 259,
+        "false_alarms": 1075,
+        "recall": 0.8450956937799043,
+        "precision": 0.5679260450160771,
+        "false_alarms_per_day": 5.842391304347826
+      },
+      {
+        "alert_threshold": 1.2,
+        "hits": 1383,
+        "misses": 289,
+        "false_alarms": 980,
+        "recall": 0.8271531100478469,
+        "precision": 0.585272958104105,
+        "false_alarms_per_day": 5.326086956521739
+      },
+      {
+        "alert_threshold": 1.25,
+        "hits": 1350,
+        "misses": 322,
+        "false_alarms": 894,
+        "recall": 0.8074162679425837,
+        "precision": 0.6016042780748663,
+        "false_alarms_per_day": 4.858695652173913
+      },
+      {
+        "alert_threshold": 1.3,
+        "hits": 1320,
+        "misses": 352,
+        "false_alarms": 823,
+        "recall": 0.7894736842105263,
+        "precision": 0.6159589360709286,
+        "false_alarms_per_day": 4.4728260869565215
+      },
+      {
+        "alert_threshold": 1.35,
+        "hits": 1286,
+        "misses": 386,
+        "false_alarms": 760,
+        "recall": 0.7691387559808612,
+        "precision": 0.6285434995112414,
+        "false_alarms_per_day": 4.130434782608695
+      },
+      {
+        "alert_threshold": 1.4,
+        "hits": 1261,
+        "misses": 411,
+        "false_alarms": 697,
+        "recall": 0.7541866028708134,
+        "precision": 0.6440245148110316,
+        "false_alarms_per_day": 3.7880434782608696
+      },
+      {
+        "alert_threshold": 1.45,
+        "hits": 1228,
+        "misses": 444,
+        "false_alarms": 615,
+        "recall": 0.7344497607655502,
+        "precision": 0.6663049376017363,
+        "false_alarms_per_day": 3.342391304347826
+      },
+      {
+        "alert_threshold": 1.5,
+        "hits": 1187,
+        "misses": 485,
+        "false_alarms": 561,
+        "recall": 0.7099282296650717,
+        "precision": 0.6790617848970252,
+        "false_alarms_per_day": 3.0489130434782608
+      },
+      {
+        "alert_threshold": 1.55,
+        "hits": 1154,
+        "misses": 518,
+        "false_alarms": 505,
+        "recall": 0.6901913875598086,
+        "precision": 0.6955997588908981,
+        "false_alarms_per_day": 2.744565217391304
+      },
+      {
+        "alert_threshold": 1.6,
+        "hits": 1115,
+        "misses": 557,
+        "false_alarms": 450,
+        "recall": 0.6668660287081339,
+        "precision": 0.7124600638977636,
+        "false_alarms_per_day": 2.4456521739130435
+      },
+      {
+        "alert_threshold": 1.65,
+        "hits": 1066,
+        "misses": 606,
+        "false_alarms": 409,
+        "recall": 0.6375598086124402,
+        "precision": 0.7227118644067797,
+        "false_alarms_per_day": 2.222826086956522
+      },
+      {
+        "alert_threshold": 1.7,
+        "hits": 1034,
+        "misses": 638,
+        "false_alarms": 364,
+        "recall": 0.618421052631579,
+        "precision": 0.7396280400572246,
+        "false_alarms_per_day": 1.9782608695652173
+      },
+      {
+        "alert_threshold": 1.75,
+        "hits": 975,
+        "misses": 697,
+        "false_alarms": 331,
+        "recall": 0.5831339712918661,
+        "precision": 0.7465543644716692,
+        "false_alarms_per_day": 1.798913043478261
+      },
+      {
+        "alert_threshold": 1.8,
+        "hits": 927,
+        "misses": 745,
+        "false_alarms": 289,
+        "recall": 0.5544258373205742,
+        "precision": 0.7623355263157895,
+        "false_alarms_per_day": 1.5706521739130435
+      },
+      {
+        "alert_threshold": 1.85,
+        "hits": 877,
+        "misses": 795,
+        "false_alarms": 260,
+        "recall": 0.5245215311004785,
+        "precision": 0.7713280562884784,
+        "false_alarms_per_day": 1.4130434782608696
+      },
+      {
+        "alert_threshold": 1.9,
+        "hits": 836,
+        "misses": 836,
+        "false_alarms": 227,
+        "recall": 0.5,
+        "precision": 0.786453433678269,
+        "false_alarms_per_day": 1.233695652173913
+      },
+      {
+        "alert_threshold": 1.95,
+        "hits": 794,
+        "misses": 878,
+        "false_alarms": 199,
+        "recall": 0.4748803827751196,
+        "precision": 0.7995971802618328,
+        "false_alarms_per_day": 1.0815217391304348
+      },
+      {
+        "alert_threshold": 2.0,
+        "hits": 758,
+        "misses": 914,
+        "false_alarms": 166,
+        "recall": 0.4533492822966507,
+        "precision": 0.8203463203463204,
+        "false_alarms_per_day": 0.9021739130434783
+      },
+      {
+        "alert_threshold": 2.05,
+        "hits": 723,
+        "misses": 949,
+        "false_alarms": 134,
+        "recall": 0.43241626794258375,
+        "precision": 0.8436406067677946,
+        "false_alarms_per_day": 0.7282608695652174
+      },
+      {
+        "alert_threshold": 2.1,
+        "hits": 682,
+        "misses": 990,
+        "false_alarms": 112,
+        "recall": 0.40789473684210525,
+        "precision": 0.8589420654911839,
+        "false_alarms_per_day": 0.6086956521739131
+      },
+      {
+        "alert_threshold": 2.15,
+        "hits": 632,
+        "misses": 1040,
+        "false_alarms": 90,
+        "recall": 0.37799043062200954,
+        "precision": 0.8753462603878116,
+        "false_alarms_per_day": 0.4891304347826087
+      },
+      {
+        "alert_threshold": 2.2,
+        "hits": 587,
+        "misses": 1085,
+        "false_alarms": 74,
+        "recall": 0.35107655502392343,
+        "precision": 0.8880484114977307,
+        "false_alarms_per_day": 0.40217391304347827
+      },
+      {
+        "alert_threshold": 2.25,
+        "hits": 535,
+        "misses": 1137,
+        "false_alarms": 62,
+        "recall": 0.3199760765550239,
+        "precision": 0.8961474036850922,
+        "false_alarms_per_day": 0.33695652173913043
+      },
+      {
+        "alert_threshold": 2.3,
+        "hits": 498,
+        "misses": 1174,
+        "false_alarms": 50,
+        "recall": 0.29784688995215314,
+        "precision": 0.9087591240875912,
+        "false_alarms_per_day": 0.2717391304347826
+      },
+      {
+        "alert_threshold": 2.35,
+        "hits": 458,
+        "misses": 1214,
+        "false_alarms": 39,
+        "recall": 0.27392344497607657,
+        "precision": 0.9215291750503019,
+        "false_alarms_per_day": 0.21195652173913043
+      },
+      {
+        "alert_threshold": 2.4,
+        "hits": 424,
+        "misses": 1248,
+        "false_alarms": 34,
+        "recall": 0.2535885167464115,
+        "precision": 0.925764192139738,
+        "false_alarms_per_day": 0.18478260869565216
+      },
+      {
+        "alert_threshold": 2.45,
+        "hits": 385,
+        "misses": 1287,
+        "false_alarms": 25,
+        "recall": 0.23026315789473684,
+        "precision": 0.9390243902439024,
+        "false_alarms_per_day": 0.1358695652173913
+      },
+      {
+        "alert_threshold": 2.5,
+        "hits": 350,
+        "misses": 1322,
+        "false_alarms": 21,
+        "recall": 0.20933014354066987,
+        "precision": 0.9433962264150944,
+        "false_alarms_per_day": 0.11413043478260869
+      },
+      {
+        "alert_threshold": 2.55,
+        "hits": 319,
+        "misses": 1353,
+        "false_alarms": 16,
+        "recall": 0.19078947368421054,
+        "precision": 0.9522388059701492,
+        "false_alarms_per_day": 0.08695652173913043
+      },
+      {
+        "alert_threshold": 2.6,
+        "hits": 283,
+        "misses": 1389,
+        "false_alarms": 14,
+        "recall": 0.16925837320574164,
+        "precision": 0.9528619528619529,
+        "false_alarms_per_day": 0.07608695652173914
+      },
+      {
+        "alert_threshold": 2.65,
+        "hits": 264,
+        "misses": 1408,
+        "false_alarms": 11,
+        "recall": 0.15789473684210525,
+        "precision": 0.96,
+        "false_alarms_per_day": 0.059782608695652176
+      },
+      {
+        "alert_threshold": 2.7,
+        "hits": 237,
+        "misses": 1435,
+        "false_alarms": 9,
+        "recall": 0.1417464114832536,
+        "precision": 0.9634146341463414,
+        "false_alarms_per_day": 0.04891304347826087
+      },
+      {
+        "alert_threshold": 2.75,
+        "hits": 209,
+        "misses": 1463,
+        "false_alarms": 8,
+        "recall": 0.125,
+        "precision": 0.9631336405529954,
+        "false_alarms_per_day": 0.043478260869565216
+      },
+      {
+        "alert_threshold": 2.8,
+        "hits": 181,
+        "misses": 1491,
+        "false_alarms": 7,
+        "recall": 0.10825358851674641,
+        "precision": 0.9627659574468085,
+        "false_alarms_per_day": 0.03804347826086957
+      },
+      {
+        "alert_threshold": 2.85,
+        "hits": 156,
+        "misses": 1516,
+        "false_alarms": 5,
+        "recall": 0.09330143540669857,
+        "precision": 0.968944099378882,
+        "false_alarms_per_day": 0.02717391304347826
+      },
+      {
+        "alert_threshold": 2.9,
+        "hits": 135,
+        "misses": 1537,
+        "false_alarms": 3,
+        "recall": 0.08074162679425838,
+        "precision": 0.9782608695652174,
+        "false_alarms_per_day": 0.016304347826086956
+      },
+      {
+        "alert_threshold": 2.95,
+        "hits": 114,
+        "misses": 1558,
+        "false_alarms": 2,
+        "recall": 0.06818181818181818,
+        "precision": 0.9827586206896551,
+        "false_alarms_per_day": 0.010869565217391304
+      },
+      {
+        "alert_threshold": 3.0,
+        "hits": 97,
+        "misses": 1575,
+        "false_alarms": 1,
+        "recall": 0.05801435406698564,
+        "precision": 0.9897959183673469,
+        "false_alarms_per_day": 0.005434782608695652
+      },
+      {
+        "alert_threshold": 3.05,
+        "hits": 75,
+        "misses": 1597,
+        "false_alarms": 1,
+        "recall": 0.04485645933014354,
+        "precision": 0.9868421052631579,
+        "false_alarms_per_day": 0.005434782608695652
+      },
+      {
+        "alert_threshold": 3.1,
+        "hits": 61,
+        "misses": 1611,
+        "false_alarms": 0,
+        "recall": 0.03648325358851675,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.15,
+        "hits": 46,
+        "misses": 1626,
+        "false_alarms": 0,
+        "recall": 0.02751196172248804,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.2,
+        "hits": 36,
+        "misses": 1636,
+        "false_alarms": 0,
+        "recall": 0.0215311004784689,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.25,
+        "hits": 27,
+        "misses": 1645,
+        "false_alarms": 0,
+        "recall": 0.016148325358851676,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.3,
+        "hits": 19,
+        "misses": 1653,
+        "false_alarms": 0,
+        "recall": 0.011363636363636364,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.35,
+        "hits": 16,
+        "misses": 1656,
+        "false_alarms": 0,
+        "recall": 0.009569377990430622,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.4,
+        "hits": 10,
+        "misses": 1662,
+        "false_alarms": 0,
+        "recall": 0.005980861244019139,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.45,
+        "hits": 7,
+        "misses": 1665,
+        "false_alarms": 0,
+        "recall": 0.004186602870813397,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      },
+      {
+        "alert_threshold": 3.5,
+        "hits": 4,
+        "misses": 1668,
+        "false_alarms": 0,
+        "recall": 0.0023923444976076554,
+        "precision": 1.0,
+        "false_alarms_per_day": 0.0
+      }
+    ],
+    "policies": {
+      "precision_50": {
+        "rule": "検証で的中率50%以上の中で検知率最大",
+        "validation": {
+          "alert_threshold": 0.95,
+          "hits": 1522,
+          "misses": 150,
+          "false_alarms": 1483,
+          "recall": 0.9102870813397129,
+          "precision": 0.5064891846921797,
+          "false_alarms_per_day": 8.059782608695652
+        },
+        "test": {
+          "alert_threshold": 0.95,
+          "hits": 1634,
+          "misses": 195,
+          "false_alarms": 1461,
+          "recall": 0.8933843630399125,
+          "precision": 0.5279483037156705,
+          "false_alarms_per_day": 8.262016965127238
+        },
+        "test_events_reference": {
+          "rise_events": 225,
+          "detected_events": 194,
+          "event_recall": 0.8622222222222222,
+          "alarm_events": 208,
+          "false_alarm_events": 77,
+          "event_precision": 0.6298076923076923,
+          "false_alarm_events_per_day": 0.4354382657869934
+        }
+      },
+      "one_false_alarm_per_day": {
+        "rule": "検証で誤報1日1件以下の中で検知率最大",
+        "validation": {
+          "alert_threshold": 2.0,
+          "hits": 758,
+          "misses": 914,
+          "false_alarms": 166,
+          "recall": 0.4533492822966507,
+          "precision": 0.8203463203463204,
+          "false_alarms_per_day": 0.9021739130434783
+        },
+        "test": {
+          "alert_threshold": 2.0,
+          "hits": 864,
+          "misses": 965,
+          "false_alarms": 160,
+          "recall": 0.4723892837616184,
+          "precision": 0.84375,
+          "false_alarms_per_day": 0.9048067860508954
+        },
+        "test_events_reference": {
+          "rise_events": 225,
+          "detected_events": 92,
+          "event_recall": 0.4088888888888889,
+          "alarm_events": 109,
+          "false_alarm_events": 16,
+          "event_precision": 0.8532110091743119,
+          "false_alarm_events_per_day": 0.09048067860508953
+        }
+      }
+    },
+    "persistence_note": "持続予測は予測上昇幅が常に0のため通知できない"
+  },
+  "ettm2_interval_90": {
+    "lower_offset": -0.9884840011596608,
+    "upper_offset": 1.0043488502502436,
+    "width": 1.9928328514099043,
+    "test_coverage": 0.8863689915174364,
+    "test_coverage_rapid_rise": 0.5773646801530892,
+    "test_actual_above_upper_rapid_rise": 0.42099507927829416
+  },
+  "ettm2_alpha_validation_mae": {
+    "0.01": 0.4458142055630468,
+    "0.1": 0.4458142055630468,
+    "1.0": 0.44581034011544957,
+    "10.0": 0.4458867257757895,
+    "100.0": 0.44678406761554273,
+    "1000.0": 0.45535201657617436
+  },
+  "ettm2_high_temperature": {
+    "threshold": 43.007999420166016,
+    "validation": {
+      "n": 2296,
+      "persistence_mae": 1.3332783104235288,
+      "ridge_mae": 0.528300853556457,
+      "persistence_under": 0.7422478007937974,
+      "ridge_under": 0.3140638364732062
+    },
+    "test": {
+      "n": 605,
+      "persistence_mae": 1.2916058816200442,
+      "ridge_mae": 0.6226618175664224,
+      "persistence_under": 0.8131670171564276,
+      "ridge_under": 0.39649294388195716
+    }
+  }
+}

@@ -15,7 +15,7 @@ ETTデータセットを使って変圧器の油温（OT）を予測し、故障
 
 ```text
 athena_task/
-├── assignment-main/       # 受領資料・元データ（変更しない）
+├── assignment-main/       # 受領資料・元データ
 │   ├── README.pdf
 │   └── data/              # ETTh1, ETTh2, ETTm1, ETTm2
 ├── configs/               # 実験設定
